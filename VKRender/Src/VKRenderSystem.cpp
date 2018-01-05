@@ -18,7 +18,7 @@ namespace test_projects {
     bool VKRenderSystem::Initialize() {
         VkApplicationInfo app_info{};
         app_info.sType       = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-        app_info.pEngineName = "VKRenderer";
+        app_info.pEngineName = "VKRender";
 
         VkInstanceCreateInfo instance_create_info{};
         instance_create_info.sType                 = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
@@ -27,18 +27,21 @@ namespace test_projects {
         instance_create_info.pApplicationInfo      = &app_info;
         VkResult result = vkCreateInstance(&instance_create_info, nullptr, &instance_);
         if (VK_SUCCESS != result) {
+            TPLOG(Error, "Failed to create Vulkan instance.");
             return false;
         }
 
         uint32_t count = 0;
         result = vkEnumeratePhysicalDevices(instance_, &count, nullptr);
         if (VK_SUCCESS != result) {
+            TPLOG(Error, "Failed to determine number of physical devices.");
             return false;
         }
 
         std::vector<VkPhysicalDevice> devices(count);
         result = vkEnumeratePhysicalDevices(instance_, &count, devices.data());
         if (VK_SUCCESS != result) {
+            TPLOG(Error, "Failed to enumerate physical devices.");
             return false;
         }
 
@@ -55,10 +58,11 @@ namespace test_projects {
         }
 
         if (!physical_device_) {
+            TPLOG(Error, "Failed to find a suitable physical device.");
             return false;
         }
 
-        TPLOG("Device Selected: %s\n", device_properties_.deviceName);
+        TPLOG(Debug, "Device Selected: %s.", device_properties_.deviceName);
 
         return true;
     }

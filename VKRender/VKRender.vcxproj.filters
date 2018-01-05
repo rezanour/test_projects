@@ -13,7 +13,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\VKRenderer.h">
+    <ClInclude Include="Include\VKRender.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Src\VKRenderSystem.h">

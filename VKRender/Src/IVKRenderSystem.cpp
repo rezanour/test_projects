@@ -1,4 +1,5 @@
-#include <VKRenderer.h>
+#include <TPLog.h>
+#include <VKRender.h>
 #include "VKRenderSystem.h"
 
 namespace test_projects {
@@ -6,11 +7,8 @@ namespace test_projects {
         out_system.reset();
 
         std::shared_ptr<VKRenderSystem> const system = std::make_shared<VKRenderSystem>();
-        if (!system) {
-            return false;
-        }
-
         if (!system->Initialize()) {
+            TPLOG(Error, "Failed to initialize VKRenderSystem.");
             return false;
         }
 

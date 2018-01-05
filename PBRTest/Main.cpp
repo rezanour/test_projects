@@ -1,7 +1,7 @@
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 
-#include <VKRenderer.h>
+#include <VKRender.h>
 
 #ifdef _WIN32
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE prev_instance, LPSTR command_line, int show_command) {

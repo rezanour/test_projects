@@ -1,16 +1,16 @@
 #pragma once
 
-#include <VKRenderer.h>
+#include <VKRender.h>
 
 #include <vulkan.h>
 
 namespace test_projects {
     class VKRenderSystem : public IVKRenderSystem {
     public:
-                 VKRenderSystem() = default;
+        VKRenderSystem() = default;
         virtual ~VKRenderSystem();
 
-        bool     Initialize();
+        bool Initialize();
 
     private:
         VkInstance                 instance_          = nullptr;

@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\TPLog.h" />
-    <ClInclude Include="Include\VKRenderer.h" />
+    <ClInclude Include="Include\VKRender.h" />
     <ClInclude Include="Src\VKRenderSystem.h" />
   </ItemGroup>
   <ItemGroup>
@@ -23,7 +23,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F5035571-1C51-4359-8A5A-19B3739746A2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>VKRenderer</RootNamespace>
+    <RootNamespace>VKRender</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -61,7 +61,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)VKRenderer\Include;$(SolutionDir)VulkanSDK\1.0.65.1\Include\vulkan;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)VKRender\Include;$(SolutionDir)VulkanSDK\1.0.65.1\Include\vulkan;</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -84,7 +84,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)VKRenderer\Include;$(SolutionDir)VulkanSDK\1.0.65.1\Include\vulkan;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)VKRender\Include;$(SolutionDir)VulkanSDK\1.0.65.1\Include\vulkan;</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
